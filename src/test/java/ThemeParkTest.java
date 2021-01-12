@@ -64,14 +64,27 @@ public class ThemeParkTest {
     }
 
     @Test
-    public void canReturnAllReviewsAsHashMap(){
+    public void canReturnAllAttractions(){
         themePark.addAttractionOrStall(dodgems);
         themePark.addAttractionOrStall(playground);
         themePark.addAttractionOrStall(rollerCoaster);
         themePark.addAttractionOrStall(candyflossStall);
         themePark.addAttractionOrStall(iceCreamStall);
         themePark.addAttractionOrStall(tobaccoStall);
-        themePark.getAllReviewsAsHashMap();
-        assertEquals(true, allReviews.HashMap.containsKey(rollerCoaster));
+        themePark.getAttractions();
+        assertEquals(3, themePark.getAttractions().size());
+
     }
+
+//    @Test
+//    public void canReturnAllReviewsAsHashMap(){
+//        themePark.addAttractionOrStall(dodgems);
+//        themePark.addAttractionOrStall(playground);
+//        themePark.addAttractionOrStall(rollerCoaster);
+//        themePark.addAttractionOrStall(candyflossStall);
+//        themePark.addAttractionOrStall(iceCreamStall);
+//        themePark.addAttractionOrStall(tobaccoStall);
+//        themePark.getAllReviewsAsHashMap();
+//        assertEquals(true, allReviews.HashMap.containsKey(rollerCoaster));
+//    }
 }

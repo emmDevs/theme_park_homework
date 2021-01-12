@@ -1,4 +1,5 @@
 import attractions.Attraction;
+import attractions.Dodgems;
 import behaviours.IReviewed;
 import org.w3c.dom.Attr;
 import people.Visitor;
@@ -38,5 +39,24 @@ public class ThemePark {
 
         }
         return allReviews;
+    }
+
+    public ArrayList<Attraction> getAttractions(){
+        ArrayList allAttractions = new ArrayList(Attraction);
+        for(IReviewed iReviewed : this.attractionsAndStalls){
+            allAttractions.add(iReviewed);
+        }
+        return allAttractions;
+    }
+
+
+    public ArrayList<IReviewed> getAllowedFor(Visitor visitor){
+        ArrayList canVisit = new ArrayList(IReviewed);
+        for(IReviewed iReviewed : this.attractionsAndStalls){
+            if(iReviewed.getClass() == Attraction){
+
+            }
+        }
+
     }
 }
