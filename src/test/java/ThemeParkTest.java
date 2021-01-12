@@ -62,4 +62,16 @@ public class ThemeParkTest {
         assertEquals(1, playground.getVisitCount());
         assertEquals(1, visitor1.visitedAttractionsCount());
     }
+
+    @Test
+    public void canReturnAllReviewsAsHashMap(){
+        themePark.addAttractionOrStall(dodgems);
+        themePark.addAttractionOrStall(playground);
+        themePark.addAttractionOrStall(rollerCoaster);
+        themePark.addAttractionOrStall(candyflossStall);
+        themePark.addAttractionOrStall(iceCreamStall);
+        themePark.addAttractionOrStall(tobaccoStall);
+        themePark.getAllReviewsAsHashMap();
+        assertEquals(true, allReviews.HashMap.containsKey(rollerCoaster));
+    }
 }
