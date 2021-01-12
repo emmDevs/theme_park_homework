@@ -55,4 +55,11 @@ public class ThemeParkTest {
         themePark.addAttractionOrStall(tobaccoStall);
         assertEquals(6, themePark.attractionAndStallCount());
     }
+
+    @Test
+    public void canVisit(){
+        themePark.visit(visitor1, playground);
+        assertEquals(1, playground.getVisitCount());
+        assertEquals(1, visitor1.visitedAttractionsCount());
+    }
 }
